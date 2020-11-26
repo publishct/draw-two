@@ -2,14 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>HTML Starter</title>
+    <title>Color Changing Rectangle</title>
     <base href="./">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/css/main.css" type="text/css">
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
   </head>
   <body>
-    <h1>HTML Starter</h1>
+    <button>Color Change</button>
     <script src="dist/js/main.js"></script>
+    <canvas id="canvas" height="600px" width="800px"></canvas>
+    <script>
+      //Plot a random x
+      var x = Math.random() * 700;
+      //Plot a random y
+      var y = Math.random() * 500;
+      // Initialize canvas
+      var canvas = document.getElementById('canvas');
+      // Create a context, a canvas can only have one so that everything drawn gets merged into a single bitmap
+      var ctx = canvas.getContext('2d');
+      // Add color at random
+      ctx.fillStyle = '#' + Math.floor(Math.random()*16777215).toString(16);
+      // Fill the rectangle
+      ctx.fillRect(x, y, 100, 100);
+    </script>
+    <script>
+    // Refresh button
+    const select = document.querySelector('button');
+    function reload() {
+    reload = location.reload();
+    }
+    
+    select.addEventListener("click", reload, true);
+    </script>
   </body>
 </html>

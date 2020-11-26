@@ -1,9 +1,4 @@
-# html-starter
-A starter package for basic HTML projects
+Color Changing Rectangle
 
-```sh
-cd /var/www
-git clone https://github.com/stack-x/html-starter.git PROJECT-NAME
-cd PROJECT-NAME
-rm -fR .git
-```
+- using canvas element and some basic javascript math
+- onclick element to reload page
